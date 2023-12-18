@@ -7,7 +7,7 @@ function DinamicPage({ data }: any) {
     <main>
       <Container>
         <Box className=" bg-lightBackground">
-          {services.map((i) => i.id == data && <p>{i.titel}</p>)}
+          {services.map((i) => i.id == data && <p key={i.id}>{i.titel}</p>)}
         </Box>
       </Container>
       <button onClick={() => console.log(data)}>22clink</button>
