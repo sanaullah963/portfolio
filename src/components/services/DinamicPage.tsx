@@ -18,9 +18,9 @@ function DinamicPage({ data }: any) {
             </div>
           ))}
         </Box>
-        <Box className={'bg-lightBackground mt-10'}>
+        <div className={'bg-lightBackground mt-10'}>
           <Services/>
-        </Box>
+        </div>
       </Container>
     </main>
   );

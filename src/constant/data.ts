@@ -190,7 +190,7 @@ export const skillArray = [
   { url: "https://www.canva.com/", name: "canva" },
   {
     url: "https://www.adobe.com/products/illustrator/free-trial-download.html",
-    name: "Adobe Illustrator",
+    name: "Adobe Photoshop",
   },
   // { url: "https://dribbble.com/", name: "Brand & Logo Designscript" },
   // { url: "https://themeforest.net/", name: "web site desgine" },
