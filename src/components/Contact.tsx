@@ -24,7 +24,7 @@ function Contant() {
                   <p className=" text-center text-colorfullText animate-pulse text-2xl">
                     {<i.icon />}</p>
                 </div>
-                <h2 className="bg-colorfullText/30 text-white py-2 text-center cursor-grab">{i.address}</h2>
+                <h2 className="bg-colorfullText/30 text-white py-2 text-center">{i.address}</h2>
                 <div className="text-center mt-7">
                   <Link
                     href={i.BTNurl} target="_blank"

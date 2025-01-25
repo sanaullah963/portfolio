@@ -1,10 +1,10 @@
 // navigation item
 export const navitem = [
   { titel: "Home", url: "/" },
+  { titel: "contact", url: "/contact" },
   { titel: "services", url: "/services" },
   { titel: "protfolio", url: "/protfolio" },
   { titel: "resume", url: "/resume.pdf", target: "_blank" },
-  { titel: "contact", url: "/contact" },
 ];
 
 // servises array
@@ -12,6 +12,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { FaNodeJs } from "react-icons/fa6";
 import { FaLaptopCode } from "react-icons/fa";
 import { GoCodespaces } from "react-icons/go";
+import { CgWebsite } from "react-icons/cg";
 export const services = [
   {
     id: 1,
@@ -34,23 +35,18 @@ export const services = [
     url: "/services/3",
     detail:'Next.js, a powerful React framework, streamlines front-end development by offering a structured and efficient way to build dynamic web applications. With Next.js, developers can leverage server-side rendering to enhance the performance of their front-end applications, ensuring faster page loads and improved SEO. The pages directory structure in Next.js simplifies routing, making it easy for front-end developers to organize and navigate between different views and components. Next.js supports automatic code splitting, allowing for optimized loading of JavaScript bundles and contributing to a more responsive and user-friendly front end. For seamless data fetching, Next.js provides hooks like useEffect and useState that enable front-end developers to fetch and display data with ease, enhancing the user experience. Developers can implement client-side routing in Next.js using the Link component, ensuring smooth transitions between pages and a more intuitive navigation experience for users.The Image component in Next.js simplifies the optimization and lazy loading of images, contributing to improved performance and a better front-end experience. CSS modules and styled-components are commonly used in Next.js for styling, offering a modular and maintainable approach to designing the front end of web applications. Next.js supports headless CMS integrations, allowing front-end developers to easily consume and display content from external sources, enhancing the flexibility of content management. The getStaticProps function in Next.js enables front-end developers to pre-render static pages at build time, optimizing performance and providing a snappy user experience for static content.',
   },
+  {
+    id: 4,
+    icon: CgWebsite,
+    titel: "simple template using HTML & CSS",
+    url: "/services/4",
+    detail:'A simple website using raw HTML and CSS is a great starting point for anyone learning web development. HTML is used to structure the content of the website, such as headings, paragraphs, images, and links, while CSS is used to style and enhance its appearance. With raw HTML and CSS, you can create basic layouts, define colors, adjust font styles, and ensure your website looks neat and organized. Although these websites might lack advanced functionality, they are ideal for understanding the core principles of web design and building a solid foundation before moving on to more complex tools and frameworks.',
+  },
 ];
 
 // protfolio image
 import { image1, image2, image3, image4, image5 } from "@/img/image";
 export const protfolioImageArr = [
-  {
-    link: "https://protfolio-xi-gold.vercel.app/",
-    titel: "countre app",
-    language: "NextJs | tailwind css",
-    img: image1,
-  },
-  {
-    link: "https://remarkable-fudge-61b699.netlify.app/",
-    titel: "E-commerce website",
-    language: " HTML | CSS ",
-    img: image2,
-  },
   {
     link: "https://6536662fe7753e06dd064713--velvety-tarsier-53373b.netlify.app/",
     titel: "Hotel Management website",
@@ -58,23 +54,31 @@ export const protfolioImageArr = [
     img: image4,
   },
   {
-    link: "https://lively-melba-663af2.netlify.app/",
-    titel: "Fashion Blog",
-    language: "HTML | CSS",
-    img: image5,
-  },
-  {
     link: "https://hotelier-lac.vercel.app/",
     titel: "Hotel management Website",
     language: "HTML | CSS | Bootstrap",
     img: image3,
   },
-  // {
-  //   link: "https://6536659fd40f0f09bfd38d1a--famous-puppy-ceac9c.netlify.app/",
-  //   titel: "Hotel management Website",
-  //   language: "React | Express | MongoDB | NodeJs",
-  //   img: image3,
-  // },
+  {
+    link: "https://protfolio-xi-gold.vercel.app/",
+    titel: "portfolio",
+    language: "NextJs | tailwind css",
+    img: image1,
+  },
+ 
+  {
+    link: "https://lively-melba-663af2.netlify.app/",
+    titel: "Fashion Blog",
+    language: "HTML | CSS",
+    img: image5,
+  },
+   {
+    link: "https://remarkable-fudge-61b699.netlify.app/",
+    titel: "E-commerce website",
+    language: " HTML | CSS ",
+    img: image2,
+  },
+ 
 ];
 
 // footer social media icon
@@ -135,6 +139,11 @@ export const skillHeaddingArray = [
       "Tailwind CSS is a utility-first CSS framework that enables developers to build custom designs by composing utility classes, offering flexibility and efficiency in styling web applications.",
   },
   {
+    name: "javaScript",
+    masseg:
+      "JavaScript is a versatile programming language used for client-side scripting in web development.",
+  },
+  {
     name: "react",
     masseg:
       "React is a JavaScript library for building user interfaces, particularly for single-page applications where components manage their state and efficiently update the user interface.",
@@ -143,11 +152,6 @@ export const skillHeaddingArray = [
     name: "nextJs",
     masseg:
       "Next.js is a React framework that simplifies the process of building server-side rendered and statically generated web applications, enhancing performance and developer experience.",
-  },
-  {
-    name: "javaScript",
-    masseg:
-      "JavaScript is a versatile programming language used for client-side scripting in web development.",
   },
   {
     name: "Node Js",
@@ -204,6 +208,11 @@ export const experianceArr = [
     id: 1,
     titel: "People N Teach",
     descripetion: "Internship on MERN stack development 2023 August-November",
+  },
+  {
+    id: 2,
+    titel: "Online Shop",
+    descripetion: "I am employ in this company as a manager 2024 may-Running",
   },
   // { id: 5, titel: "Fiverr", descripetion: "MERN Stack Developer 2019 - 2020" },
 ];
