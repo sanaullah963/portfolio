@@ -8,7 +8,6 @@ import { contactimage } from "@/img/image";
 import { contactBoxArray, contuctInputArray } from "@/constant/data";
 import Link from "next/link";
 import { useState } from "react";
-import axios from "axios";
 
 function Contant() {
   const [formData, setFormData] = useState({
@@ -20,10 +19,11 @@ function Contant() {
   });
 
   // Handle input change
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
- 
 
   return (
     <main>
