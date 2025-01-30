@@ -225,10 +225,10 @@ export const experianceArr = [
 
 // contact input array
 export const contuctInputArray = [
-  { id: 1, type: "text", placeholder: "enter your name" },
-  { id: 2, type: "email", placeholder: "your email address" },
-  { id: 3, type: "number", placeholder: "whatapp number" },
-  { id: 4, type: "number", placeholder: "contact number" },
+  { id: 1, type: "text",name:'name', placeholder: "enter your name" },
+  { id: 2, type: "email",name:'email', placeholder: "your email address" },
+  { id: 3, type: "number",name:'whatsAppNumber', placeholder: "whatapp number" },
+  { id: 4, type: "number",name:'number', placeholder: "contact number" },
 ];
 // contact box array
 import { FiMail } from "react-icons/fi";
