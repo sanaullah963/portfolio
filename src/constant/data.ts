@@ -45,13 +45,19 @@ export const services = [
 ];
 
 // protfolio image
-import { image1, image2, image3, image4, image5 } from "@/img/image";
+import { image1, image2, image3, image4, image5,image6 } from "@/img/image";
 export const protfolioImageArr = [
   {
     link: "https://6536662fe7753e06dd064713--velvety-tarsier-53373b.netlify.app/",
     titel: "Hotel Management website",
     language: "HTML | CSS | Bootstrap",
     img: image4,
+  },
+  {
+    link: "https://lifer-bd.vercel.app/",
+    titel: "Dynamic E-commerce website",
+    language: "NextJS | Tailwind | NodeJS | MongoDB",
+    img: image6,
   },
   {
     link: "https://hotelier-lac.vercel.app/",

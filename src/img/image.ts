@@ -14,8 +14,9 @@ import image2 from '@/img/protfolio/image-2.png';
 import image3 from '@/img/protfolio/image-3.png';
 import image4 from '@/img/protfolio/image-4.png';
 import image5 from '@/img/protfolio/image-5.png';
+import image6 from '@/img/protfolio/image-6.png';
 
 // contact page image
 import contactimage from '@/img/contact-image.png'
 
-export {logoColorfull,logoGray,banner,protfolio1,protfolio2,protfolio3,protfolio4,protfolio5,protfolio6,contactimage,image1,image2,image3,image4,image5}
+export {logoColorfull,logoGray,banner,protfolio1,protfolio2,protfolio3,protfolio4,protfolio5,protfolio6,contactimage,image1,image2,image3,image4,image5,image6}
