@@ -99,7 +99,7 @@ function Contant() {
               <input
                 type="hidden"
                 name="_next"
-                value={`https://intisar-sanaullah.vercel.app/contact`}
+                value={`https://intisar-sanaullah.vercel.app/`}
               />
 
               <button
