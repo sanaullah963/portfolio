@@ -71,7 +71,7 @@ function Contant() {
             </div>
             <form
               target="_blank"
-              action={`${process.env.NEXT_PUBLIC_GMAIL_URL}`}
+              action={`https://formsubmit.co/intisarsanaillah@gmail.com`}
               method="POST"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-14 gap-y-10 mb-10">
