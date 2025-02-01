@@ -46,13 +46,24 @@ function Contant() {
                   {i.address}
                 </h2>
                 <div className="text-center mt-7">
-                  <Link
-                    href={i.BTNurl}
-                    target="_blank"
-                    className="bg-colorfullText py-2 px-3 text-xl inline-block text-lightBackground capitalize rounded-md hover:bg-lightBackground hover:text-darkText duration-300"
-                  >
-                    {i.button}
-                  </Link>
+                  {i.button == "call" ? (
+                    <button
+                      onClick={() =>
+                        (window.location.href = "tel:+8801796362484")
+                      }
+                      className="bg-colorfullText py-2 px-3 text-xl inline-block text-lightBackground capitalize rounded-md hover:bg-lightBackground hover:text-darkText duration-300"
+                    >
+                      {i.button}
+                    </button>
+                  ) : (
+                    <Link
+                      href={i.BTNurl}
+                      target="_blank"
+                      className="bg-colorfullText py-2 px-3 text-xl inline-block text-lightBackground capitalize rounded-md hover:bg-lightBackground hover:text-darkText duration-300"
+                    >
+                      {i.button}
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

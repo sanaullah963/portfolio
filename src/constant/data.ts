@@ -234,16 +234,8 @@ export const contuctInputArray = [
 import { FiMail } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BiSolidPhoneCall } from "react-icons/bi";
-import { MdOutlineContactPage } from "react-icons/md";
-// linkedin icon import top this page
+import { MdOutlineContactPage } from "react-icons/md";// linkedin icon import top this page
 export const contactBoxArray = [
-  {
-    icon: MdOutlineContactPage,
-    headding: "my rusume",
-    // address: "intisarsanaullah963@gmail",
-    button: "see resume",
-    BTNurl: "/resume.pdf",
-  },
   {
     icon: FiMail,
     headding: "email address",
@@ -271,5 +263,12 @@ export const contactBoxArray = [
     address: "@intisar-sanaullah",
     button: "visit",
     BTNurl: "https://www.linkedin.com/in/intisar-sanaullah/",
+  },
+  {
+    icon: MdOutlineContactPage,
+    headding: "my rusume",
+    // address: "intisarsanaullah963@gmail",
+    button: "see resume",
+    BTNurl: "/resume.pdf",
   },
 ];
