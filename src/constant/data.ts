@@ -45,7 +45,7 @@ export const services = [
 ];
 
 // protfolio image
-import { image1, image2, image3, image4, image5,image6 } from "@/img/image";
+import { image1, image2, image3, image4, image5,image6, image7 } from "@/img/image";
 export const protfolioImageArr = [
   {
     link: "https://6536662fe7753e06dd064713--velvety-tarsier-53373b.netlify.app/",
@@ -83,6 +83,12 @@ export const protfolioImageArr = [
     titel: "E-commerce website",
     language: " HTML | CSS ",
     img: image2,
+  },
+  {
+    link: "https://mini-ly.vercel.app/",
+    titel: "Easily shorten your URLs",
+    language: "NextJS | Tailwind | ExoreesJs | MongoDB",
+    img: image7,
   },
  
 ];
