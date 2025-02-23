@@ -9,13 +9,14 @@ import protfolio4 from '@/img/protfolio/protfolio4.png';
 import protfolio5 from '@/img/protfolio/protfolio5.png';
 import protfolio6 from '@/img/protfolio/protfolio6.png';
 
-import image1 from '@/img/protfolio/image-1.png';
-import image2 from '@/img/protfolio/image-2.png';
-import image3 from '@/img/protfolio/image-3.png';
-import image4 from '@/img/protfolio/image-4.png';
-import image5 from '@/img/protfolio/image-5.png';
-import image6 from '@/img/protfolio/image-6.png';
-import image7 from '@/img/protfolio/image-7.png';
+import image1 from '@/img/protfolio/image-1.webp';
+import image2 from '@/img/protfolio/image-2.webp';
+import image3 from '@/img/protfolio/image-3.webp';
+import image4 from '@/img/protfolio/image-4.webp';
+// import exampleImage from '@/img/protfolio/image-4.webp';
+import image5 from '@/img/protfolio/image-5.webp';
+import image6 from '@/img/protfolio/image-6.webp';
+import image7 from '@/img/protfolio/image-7.webp';
 
 // contact page image
 import contactimage from '@/img/contact-image.png'
