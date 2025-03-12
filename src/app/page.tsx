@@ -15,11 +15,11 @@ export default function Home() {
       <Suspense fallback={<Loading />}>
         <Banner />
         <About />
+        <Protfolio />
+        <Experience />
+        <Contant />
         <Skill />
         <Services />
-        <Experience />
-        <Protfolio />
-        <Contant />
       </Suspense>
     </main>
   );

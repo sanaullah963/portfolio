@@ -27,48 +27,6 @@ function Contant() {
   return (
     <main>
       <Container>
-        <Box className={"bg-lightBackground pt-7 pb-3"}>
-          <BoxHeadding headding={"contact me"} className={"mb-8"} />
-          {/* box section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
-            {contactBoxArray.map((i) => (
-              <div key={i.headding} className="bg-darkBackground px-3 py-9">
-                <div className="flex items-center gap-x-3 mb-1">
-                  <BoxHeadding
-                    headding={i.headding}
-                    className={"text-lightBackground mb-0"}
-                  />
-                  <p className=" text-center text-colorfullText animate-pulse text-2xl">
-                    {<i.icon />}
-                  </p>
-                </div>
-                <h2 className="bg-colorfullText/30 text-white py-2 text-center">
-                  {i.address}
-                </h2>
-                <div className="text-center mt-7">
-                  {i.button == "call" ? (
-                    <button
-                      onClick={() =>
-                        (window.location.href = "tel:+8801796362484")
-                      }
-                      className="bg-colorfullText py-2 px-3 text-xl inline-block text-lightBackground capitalize rounded-md hover:bg-lightBackground hover:text-darkText duration-300"
-                    >
-                      {i.button}
-                    </button>
-                  ) : (
-                    <Link
-                      href={i.BTNurl}
-                      target="_blank"
-                      className="bg-colorfullText py-2 px-3 text-xl inline-block text-lightBackground capitalize rounded-md hover:bg-lightBackground hover:text-darkText duration-300"
-                    >
-                      {i.button}
-                    </Link>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </Box>
         {/* input section */}
         <Box className={"bg-white my-10"}>
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -122,6 +80,49 @@ function Contant() {
             </form>
           </div>
         </Box>
+        <Box className={"bg-lightBackground pt-7 pb-3"}>
+          <BoxHeadding headding={"contact me"} className={"mb-8"} />
+          {/* box section */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
+            {contactBoxArray.map((i) => (
+              <div key={i.headding} className="bg-darkBackground px-3 py-9">
+                <div className="flex items-center gap-x-3 mb-1">
+                  <BoxHeadding
+                    headding={i.headding}
+                    className={"text-lightBackground mb-0"}
+                  />
+                  <p className=" text-center text-colorfullText animate-pulse text-2xl">
+                    {<i.icon />}
+                  </p>
+                </div>
+                <h2 className="bg-colorfullText/30 text-white py-2 text-center">
+                  {i.address}
+                </h2>
+                <div className="text-center mt-7">
+                  {i.button == "call" ? (
+                    <button
+                      onClick={() =>
+                        (window.location.href = "tel:+8801796362484")
+                      }
+                      className="bg-colorfullText py-2 px-3 text-xl inline-block text-lightBackground capitalize rounded-md hover:bg-lightBackground hover:text-darkText duration-300"
+                    >
+                      {i.button}
+                    </button>
+                  ) : (
+                    <Link
+                      href={i.BTNurl}
+                      target="_blank"
+                      className="bg-colorfullText py-2 px-3 text-xl inline-block text-lightBackground capitalize rounded-md hover:bg-lightBackground hover:text-darkText duration-300"
+                    >
+                      {i.button}
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Box>
+        
       </Container>
     </main>
   );
