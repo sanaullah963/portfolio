@@ -8,6 +8,7 @@ import { contactimage } from "@/img/image";
 import { contactBoxArray, contuctInputArray } from "@/constant/data";
 import Link from "next/link";
 import { useState } from "react";
+import axios from "axios";
 
 function Contant() {
   const [formData, setFormData] = useState({
@@ -24,6 +25,38 @@ function Contant() {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  // handel submit
+  const handelSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // You can add any additional logic here if needed
+    const { name, email, number,whatsAppNumber, message } = formData;
+    const data = {
+      name,
+      email,
+      number,
+      whatsAppNumber,
+      message,
+    };
+    const res = await axios.post("https://formsubmit.co/intisarsanaillah@gmail.com", data, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+    console.log(res);
+    // if (res.status === 200) {
+    //   alert("Message sent successfully!");
+    //   setFormData({
+    //     name: "",
+    //     email: "",
+    //     number: "",
+    //     whatsAppNumber: "",
+    //     message: "",
+    //   });
+    // } else {
+    //   alert("Failed to send message. Please try again.");
+    // }
+  };
   return (
     <main>
       <Container>
@@ -39,9 +72,9 @@ function Contant() {
               />
             </div>
             <form
-              target="_blank"
-              action={`https://formsubmit.co/intisarsanaillah@gmail.com`}
-              method="POST"
+              // target="_blank"
+              // action={`https://formsubmit.co/intisarsanaillah@gmail.com`}
+              // method="POST"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-14 gap-y-10 mb-10">
                 {contuctInputArray.map((i) => (
@@ -73,6 +106,7 @@ function Contant() {
 
               <button
                 type="submit"
+                onClick={handelSubmit}
                 className="bg-colorfullText text-lightBackground hover:bg-darkBackground duration-300 w-full py-3 text-xl"
               >
                 Submit
