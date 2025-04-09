@@ -20,6 +20,7 @@ function Banner() {
                 <Typewriter
                   words={[
                     "Next Js developer",
+                    "Frontend developer",
                     "Full Stack Developer",
                     "MERN Stack Developer",
                   ]}

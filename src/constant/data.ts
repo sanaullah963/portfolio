@@ -218,15 +218,15 @@ export const skillArray = [
 export const experianceArr = [
   {
     id: 1,
-    titel: "People N Teach",
-    descripetion: "Internship on MERN stack development 2023 August-November",
+    titel: "Online Shop",
+    descripetion: "I am employ in this company as a manager 2024 may - 2025 march",
   },
   {
     id: 2,
-    titel: "Online Shop",
-    descripetion: "I am employ in this company as a manager 2024 may-Running",
+    titel: "People N Teach",
+    descripetion: "Internship on MERN stack development 2023 August - November",
   },
-  // { id: 5, titel: "Fiverr", descripetion: "MERN Stack Developer 2019 - 2020" },
+  
 ];
 
 // contact input array
@@ -237,7 +237,7 @@ export const contuctInputArray = [
   { id: 4, type: "number",name:'number', placeholder: "contact number" },
 ];
 // contact box array
-import { FiMail } from "react-icons/fi";
+import { FiMail,FiGithub } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { MdOutlineContactPage } from "react-icons/md";// linkedin icon import top this page
@@ -276,5 +276,12 @@ export const contactBoxArray = [
     // address: "intisarsanaullah963@gmail",
     button: "see resume",
     BTNurl: "/resume.pdf",
+  },
+  {
+    icon: FiGithub ,
+    headding: "github account",
+    address: "@sanaullah963",
+    button: "visit",
+    BTNurl: "https://github.com/sanaullah963",
   },
 ];
