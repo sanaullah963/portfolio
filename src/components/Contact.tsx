@@ -9,6 +9,8 @@ import { contactBoxArray, contuctInputArray } from "@/constant/data";
 import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
+import qs from 'qs';
+
 
 function Contant() {
   const [formData, setFormData] = useState({
@@ -30,17 +32,19 @@ function Contant() {
     e.preventDefault();
     // You can add any additional logic here if needed
     const { name, email, number,whatsAppNumber, message } = formData;
-    const data = {
+
+    const res = await axios.post("https://formsubmit.co/intisarsanaillah@gmail.com",qs.stringify({
       name,
       email,
       number,
       whatsAppNumber,
       message,
-    };
-    const res = await axios.post("https://formsubmit.co/intisarsanaillah@gmail.com", data, {
+      _captcha: "false",
+      // _next: `${process.env.NEXT_PUBLIC_CLIENT_URL}/contact/hierme`,
+    }),
+    {
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
     });
     console.log(res);
@@ -57,6 +61,7 @@ function Contant() {
     //   alert("Failed to send message. Please try again.");
     // }
   };
+
   return (
     <main>
       <Container>
