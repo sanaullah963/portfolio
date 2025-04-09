@@ -48,18 +48,18 @@ function Contant() {
       },
     });
     console.log(res);
-    // if (res.status === 200) {
-    //   alert("Message sent successfully!");
-    //   setFormData({
-    //     name: "",
-    //     email: "",
-    //     number: "",
-    //     whatsAppNumber: "",
-    //     message: "",
-    //   });
-    // } else {
-    //   alert("Failed to send message. Please try again.");
-    // }
+    if (res.status === 200) {
+      alert("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        number: "",
+        whatsAppNumber: "",
+        message: "",
+      });
+    } else {
+      alert("Failed to send message. Please try again.");
+    }
   };
 
   return (
@@ -89,6 +89,7 @@ function Contant() {
                       type={i.type}
                       name={i.name}
                       placeholder={i.placeholder}
+                      value={(formData as any)[i.name] || ""}
                       onChange={handleChange}
                       className=" border-b-2 border-colorfullText px-2 pt-1 pb-2 outline-none capitalize w-full"
                     />
@@ -98,6 +99,7 @@ function Contant() {
               <textarea
                 name="message"
                 placeholder="Type Your Messag"
+                value={formData.message}
                 onChange={handleChange}
                 className="w-full p-2 min-h-[100px] outline-none mb-3 border border-colorfullText"
               ></textarea>
