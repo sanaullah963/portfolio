@@ -4,13 +4,14 @@ import { banner } from "@/img/image";
 import Image from "next/image";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
+
 function Banner() {
   return (
-    <main>
-      <div className="bg-darkBackground w-full min-h-screen">
-        <div className="max-w-screen-xl mx-auto py-14 px-6 md:px-10 grid grid-cols-1 md:grid-cols-2">
+    <main className="max-w-screen-xl mx-auto">
+      <div className="bg-darkBackground w-full min-h-screen/80 flex flex-col justify-center items-center relative">
+        <div className="  py-14 px-6 md:px-10 flex flex-col md:flex-row items-center justify-center">
           {/* -----left */}
-          <div className="text-white my-auto mb-14 md:mb-0">
+          <div className= "text-white  mb-14 md:mb-0">
             <h1 className="text-xl md:text-3xl tracking-widest font-semibold uppercase  text-colorfullText">
               Intisar Sanaullah
             </h1>
@@ -37,9 +38,8 @@ function Banner() {
             </div>
             <div className=" text-lg">
               <p className="mb-2">
-                I&apos;m a MERN stack Developer. I
-                specialized in Reactjs, Nextjs, Nodejs, MongoDB, Tailwindcss,
-                Express and many more.
+                I&apos;m a MERN stack Developer. I specialized in Reactjs,
+                Nextjs, Nodejs, MongoDB, Tailwindcss, Express and many more.
               </p>
             </div>
             {/* left button */}
@@ -47,11 +47,13 @@ function Banner() {
               <Link href={"/contact"}>Hier Me</Link>
             </button>
             <button className="px-8 py-2 mt-8 text-xl bg-colorfullText text-lightBackground rounded-lg hover:bg-lightBackground hover:text-darkBackground duration-300">
-              <Link href={"/resume.pdf"} target="_blank">See Resume</Link>
+              <Link href={"/resume.pdf"} target="_blank">
+                See Resume
+              </Link>
             </button>
           </div>
           {/* right */}
-          <div className="w-[70%] m-auto">
+          <div className="w-[70%] m-auto iner-2">
             <Image src={banner} alt="banner image" className=" " />
           </div>
         </div>
