@@ -13,6 +13,8 @@ import qs from 'qs';
 
 
 function Contant() {
+  const [isLoading, setIsLoading] = useState(false);
+  // form data state
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,9 +32,16 @@ function Contant() {
   // handel submit
   const handelSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     // You can add any additional logic here if needed
     const { name, email, number,whatsAppNumber, message } = formData;
-
+    if ( email === "" && number === "" && whatsAppNumber === "") {
+      alert("Please fill in all fields.");
+      setIsLoading(false);
+      return;
+    }
+    
+    
     const res = await axios.post("https://formsubmit.co/intisarsanaillah@gmail.com",qs.stringify({
       name,
       email,
@@ -47,7 +56,7 @@ function Contant() {
         "Content-Type": "application/x-www-form-urlencoded",
       },
     });
-    console.log(res);
+
     if (res.status === 200) {
       alert("Message sent successfully!");
       setFormData({
@@ -60,6 +69,7 @@ function Contant() {
     } else {
       alert("Failed to send message. Please try again.");
     }
+    setIsLoading(false);
   };
 
   return (
@@ -117,7 +127,14 @@ function Contant() {
                 
                 className="bg-colorfullText text-lightBackground hover:bg-darkBackground duration-300 w-full py-3 text-xl"
               >
-                Submit
+                {isLoading ? (
+                  <svg
+                    className="m-auto animate-spin h-6 w-6 border-4 border-y-0 border-lightBackground rounded-full"
+                    viewBox="0 0 24 24"
+                  ></svg>
+                ) : (
+                  "Send Message"
+                )}
               </button>
             </form>
           </div>
