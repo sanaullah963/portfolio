@@ -14,7 +14,7 @@ function Navbar() {
   const router = useRouter();
 
   return (
-    <main className="sticky top-0 z-10">
+    <main className="sticky top-0 z-10 max-w-screen-xl mx-auto">
       <div className="w-full bg-darkBackground h-16 ">
         <div className="max-w-screen-xl mx-auto px-4 md:px-10 flex justify-between items-center relative">
           <Link href={"/"}>
