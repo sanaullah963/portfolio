@@ -72,6 +72,7 @@ function Contant() {
               />
             </div>
             <form
+            onSubmit={handelSubmit}
               // target="_blank"
               // action={`https://formsubmit.co/intisarsanaillah@gmail.com`}
               // method="POST"
@@ -106,7 +107,7 @@ function Contant() {
 
               <button
                 type="submit"
-                onClick={handelSubmit}
+                
                 className="bg-colorfullText text-lightBackground hover:bg-darkBackground duration-300 w-full py-3 text-xl"
               >
                 Submit
