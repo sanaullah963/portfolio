@@ -42,10 +42,10 @@ function Navbar() {
       <div
         className={`w-full max-w-screen-xl bg-darkBackground h-16 transition-all duration-300 ease-in-out fixed z-10  ${
           scrollY < 5
-            ? "translate-y-[0%]"
+            ? "top-0"
             : isFixed
-            ? " translate-y-[0%]"
-            : " -translate-y-[105%]"
+            ? " top-0"
+            : "-translate-y-[200%] hidden"
         }`}
       >
         <div className="max-w-screen-xl mx-auto px-4 md:px-10 flex justify-between items-center relative transition-all duration-300 ease-in-out">

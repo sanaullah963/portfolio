@@ -15,8 +15,6 @@ export default function Home() {
     <main>
       <Suspense fallback={<Loading />}>
         <Banner />
-
-
         <About />
         <Protfolio />
         <Experience />
