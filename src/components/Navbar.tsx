@@ -6,6 +6,8 @@ import Link from "next/link";
 import { navitem } from "@/constant/data";
 import { usePathname, useRouter } from "next/navigation";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Console } from "console";
+
 
 function Navbar() {
   const pathname = usePathname();
@@ -29,13 +31,17 @@ function Navbar() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+    
   }, []);
+
+
+
 
   return (
     <main className="max-w-screen-xl mx-auto">
       <div
         className={`w-full max-w-screen-xl bg-darkBackground h-16 transition-all duration-300 ease-in-out fixed z-10  ${
-          scrollY < 10
+          scrollY < 5
             ? "translate-y-[0%]"
             : isFixed
             ? " translate-y-[0%]"

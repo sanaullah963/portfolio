@@ -8,7 +8,7 @@ import { Typewriter } from "react-simple-typewriter";
 function Banner() {
   return (
     <main className="max-w-screen-xl mx-auto">
-      <div className="bg-darkBackground w-full min-h-screen/80 flex flex-col justify-center items-center relative">
+      <div className="bg-darkBackground py-5 w-full min-h-screen/80 flex flex-col justify-center items-center relative">
         <div className="  py-14 px-6 md:px-10 flex flex-col md:flex-row items-center justify-center">
           {/* -----left */}
           <div className= "text-white  mb-14 md:mb-0">
@@ -53,7 +53,7 @@ function Banner() {
             </button>
           </div>
           {/* right */}
-          <div className="w-[70%] m-auto iner-2">
+          <div className="w-[60%] m-auto iner-2">
             <Image src={banner} alt="banner image" className=" " />
           </div>
         </div>
