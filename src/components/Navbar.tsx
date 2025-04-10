@@ -1,22 +1,48 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { logoColorfull } from "@/img/image";
 import Image from "next/image";
 import Link from "next/link";
 import { navitem } from "@/constant/data";
 import { usePathname, useRouter } from "next/navigation";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { motion } from "framer-motion";
 
 function Navbar() {
   const pathname = usePathname();
   const [show, setShow] = useState(false);
+  const [isFixed, setIsFixed] = useState(false); // State for scroll position
+  const [scrollY, setScrollY] = useState(0); // To track scroll position
   const router = useRouter();
 
+  // Effect to handle scroll position and toggle fixed navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      if (window.scrollY > 550) {
+        setIsFixed(true); // Make navbar fixed when scrolling down more than 100px
+      } else {
+        setIsFixed(false); // Remove fixed navbar when at the top
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <main className="sticky top-0 z-10 max-w-screen-xl mx-auto">
-      <div className="w-full bg-darkBackground h-16 ">
-        <div className="max-w-screen-xl mx-auto px-4 md:px-10 flex justify-between items-center relative">
+    <main className="max-w-screen-xl mx-auto">
+      <div
+        className={`w-full max-w-screen-xl bg-darkBackground h-16 transition-all duration-300 ease-in-out fixed z-10  ${
+          scrollY < 10
+            ? "translate-y-[0%]"
+            : isFixed
+            ? " translate-y-[0%]"
+            : " -translate-y-[105%]"
+        }`}
+      >
+        <div className="max-w-screen-xl mx-auto px-4 md:px-10 flex justify-between items-center relative transition-all duration-300 ease-in-out">
           <Link href={"/"}>
             <Image src={logoColorfull} alt="logo image" className="w-16 mt-3" />
           </Link>
@@ -28,7 +54,6 @@ function Navbar() {
                     pathname === i.url && "text-colorfullText"
                   } `}
                 >
-                  {/* <span className={`h-[2px] w-full bg-white inline-flex absolute top-0 left-0 translate-x-[105%] group-hover:-translate-x-[105%] duration-700`}></span> */}
                   {i.titel}
                   <span
                     className={`h-[2px] w-full bg-white inline-flex absolute bottom-0 left-0 -translate-x-[105%] group-hover:translate-x-[105%] duration-500 ${
@@ -49,12 +74,9 @@ function Navbar() {
             </span>
           </div>
           {/* mobile device navbar item */}
+
           {show && (
-            <motion.ul
-              initial={{ x: 40, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              className=" md:hidden flex flex-col bg-darkBackground gap-5 text-white  absolute top-16 right-0 px-5 py-3"
-            >
+            <ul className="md:hidden flex flex-col bg-darkBackground gap-5 text-white absolute top-16 left-0 right-0 px-5 py-3 ">
               {navitem.map((i) => (
                 <Link key={i.titel} href={i.url}>
                   <li
@@ -68,7 +90,7 @@ function Navbar() {
                   </li>
                 </Link>
               ))}
-            </motion.ul>
+            </ul>
           )}
         </div>
       </div>

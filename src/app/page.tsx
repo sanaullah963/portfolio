@@ -1,3 +1,4 @@
+'use client'
 import About from "@/components/About";
 import BactToTop from "@/components/BactToTop";
 import Banner from "@/components/Banner";
@@ -14,6 +15,8 @@ export default function Home() {
     <main>
       <Suspense fallback={<Loading />}>
         <Banner />
+
+
         <About />
         <Protfolio />
         <Experience />

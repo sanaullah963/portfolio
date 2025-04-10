@@ -57,7 +57,6 @@ function Banner() {
             <Image src={banner} alt="banner image" className=" " />
           </div>
         </div>
-        f
       </div>
     </main>
   );
